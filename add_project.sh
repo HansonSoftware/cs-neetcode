@@ -21,4 +21,4 @@ dotnet sln add "${PROBLEM_NAME}.Tests/${PROBLEM_NAME}.Tests.csproj"
 # Add reference from the test project to the class library project
 dotnet add "${PROBLEM_NAME}.Tests/${PROBLEM_NAME}.Tests.csproj" reference "$PROBLEM_NAME/$PROBLEM_NAME.csproj"
 
-echo "Setup complete. Solution '$PROBLEM_NAME.sln' created with projects '$PROBLEM_NAME' and '${PROBLEM_NAME}.Tests'."
+echo "Setup complete. Solution '$PROBLEM_NAME' created with projects '$PROBLEM_NAME' and '${PROBLEM_NAME}.Tests'."
