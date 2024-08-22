@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "TwoSum\TwoSum.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum.Tests", "TwoSum.Tests\TwoSum.Tests.csproj", "{7CF822E7-2085-415A-95B0-204866CFC915}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidAnagram", "ValidAnagram\ValidAnagram.csproj", "{3D0E07F1-0680-4D4E-96F3-8FA8A6F5AAFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidAnagram.Tests", "ValidAnagram.Tests\ValidAnagram.Tests.csproj", "{ACF87219-21C3-4C53-A0A8-412C3807AB81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{7CF822E7-2085-415A-95B0-204866CFC915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CF822E7-2085-415A-95B0-204866CFC915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CF822E7-2085-415A-95B0-204866CFC915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D0E07F1-0680-4D4E-96F3-8FA8A6F5AAFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D0E07F1-0680-4D4E-96F3-8FA8A6F5AAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D0E07F1-0680-4D4E-96F3-8FA8A6F5AAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D0E07F1-0680-4D4E-96F3-8FA8A6F5AAFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF87219-21C3-4C53-A0A8-412C3807AB81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF87219-21C3-4C53-A0A8-412C3807AB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF87219-21C3-4C53-A0A8-412C3807AB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF87219-21C3-4C53-A0A8-412C3807AB81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
