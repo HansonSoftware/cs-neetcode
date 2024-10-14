@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "TwoSum\TwoSum.csproj", "{A4E855B7-4770-4CAA-AF3A-2A2446D1D9B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum.Tests", "TwoSum.Tests\TwoSum.Tests.csproj", "{73EA00D2-4020-40F7-8EBE-D04FE30696D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +32,13 @@ Global
 		{ACF87219-21C3-4C53-A0A8-412C3807AB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACF87219-21C3-4C53-A0A8-412C3807AB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACF87219-21C3-4C53-A0A8-412C3807AB81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4E855B7-4770-4CAA-AF3A-2A2446D1D9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4E855B7-4770-4CAA-AF3A-2A2446D1D9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4E855B7-4770-4CAA-AF3A-2A2446D1D9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4E855B7-4770-4CAA-AF3A-2A2446D1D9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73EA00D2-4020-40F7-8EBE-D04FE30696D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73EA00D2-4020-40F7-8EBE-D04FE30696D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73EA00D2-4020-40F7-8EBE-D04FE30696D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73EA00D2-4020-40F7-8EBE-D04FE30696D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
