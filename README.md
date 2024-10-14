@@ -1,8 +1,6 @@
-# TDD C# Environment for Leetcode
+# TDD C# Environment for Solving Leetcode Locally
 
 [Blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp)
-
-[This commit](https://github.com/HansonSoftware/cs-neetcode/commit/9d6952e832c7d4b0a21dde9baea8753e170428b8), labeled `STARTING POINT` is the commit you should start from if you don't want to clone all my solutions!
 
 ## MacOS Specific Instructions
 
@@ -35,7 +33,7 @@ brew install --cask dotnet-sdk
 
 Install `dotnet` with your distros package manager.
 
-I use Arch (btw) so I'll install it using pacman.
+I use Arch (btw), so I'll install it using pacman.
 
 ```sh
 sudo pacman -S dotnet-runtime dotnet-sdk
@@ -50,11 +48,15 @@ I'm going to call mine cs-neetcode.
 ```sh
 mkdir cs-neetcode && cd cs-neetcode
 git init
+
+touch .gitignore
+
+echo "/bin" >> .gitignore
 ```
 
 ### 1.3 Modular File System
 
-The repository is designed as follows:
+This is how our repository will look as we fill it up with various solutions and tests.
 
 ```sh
 cs-neetcode/
@@ -73,7 +75,9 @@ cs-neetcode/
 
 You will have a unique directory for each problem you solve.
 
-Now, create a solution file for the entire project:
+Let's create the structure above by running the following commands!
+
+Create a solution file for the entire project:
 
 > Run this command from the root directory of the repository.
 
@@ -82,6 +86,8 @@ dotnet new sln -n cs-neetcode
 ```
 
 ### 1.4 Preparing Solution Directories
+
+**Note:** Read this entire section before running the commands, I have a shell script at the end that may be useful to you.
 
 For each problem, create a new class library and a corresponding test project.
 
@@ -107,9 +113,11 @@ Link the test project to the problem project so that the tests can reference the
 dotnet add TwoSum.Tests/TwoSum.Tests.csproj reference TwoSum/TwoSum.csproj
 ```
 
-**add_project.sh**
+I have created a shell script to automate the process detailed above.
 
-`sudo chmod +x`
+Be sure to make it executable with `sudo chmod +x add_problem.sh`
+
+**add_problem.sh**
 
 ```sh
 #!/bin/sh
@@ -163,17 +171,15 @@ if [ "$defaultFile" = "Class1.cs" ]; then
 	touch "$PROBLEM_NAME.cs"
 
 	# Preview to terminal
-	echo "public class ${PROBLEM_NAME}Solver\n{"
-	echo "  public void $PROBLEM_NAME()\n  {\n    throw new ArgumentException(\"No ${PROBLEM_NAME} solution\");\n  }\n}"
+	echo "public class ${PROBLEM_NAME}Solver\n{\n  public void ${PROBLEM_NAME}()\n  {\n    // Your implementation here...\n    throw new ArgumentException(\"No ContainsDuplicate solution\");\n  }\n}\n"
 	# Write to file
-	echo "public class ${PROBLEM_NAME}Solver\n{" >> "$PROBLEM_NAME.cs"
-	echo "  public void $PROBLEM_NAME()\n  {\n    throw new ArgumentException(\"No ${PROBLEM_NAME} solution\");\n  }\n}" >> "$PROBLEM_NAME.cs"
+	echo "public class ${PROBLEM_NAME}Solver\n{\n  public void ${PROBLEM_NAME}()\n  {\n    // Your implementation here...\n    throw new ArgumentException(\"No ContainsDuplicate solution\");\n  }\n}\n" >> "${PROBLEM_NAME}.cs"
 fi
 
 echo "Done."
 
 # REFACTORING TESTING FILES
-echo "Refactoring the zunit files..."
+echo "Refactoring the xunit files..."
 
 cd "../${PROBLEM_NAME}.Tests"
 
@@ -275,6 +281,7 @@ For example:
 **TwoSum.Tests/**
 
 ```sh
+cd TwoSum.Tests
 dotnet test
 ```
 
