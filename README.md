@@ -296,6 +296,6 @@ cd TwoSum.Tests
 dotnet test
 ```
 
-![dotnet test](/images/posts/test-driven-c-sharp/example.png)
+![dotnet test](https://www.haydenhanson.dev/images/posts/test-driven-c-sharp/example.png)
 
 **_Happy Coding!_**
