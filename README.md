@@ -2,9 +2,13 @@
 
 [Blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp)
 
+## How to use this repo:
+
 ## MacOS Specific Instructions
 
 ### 1.1 Install the DOTNET sdk
+
+#### How? With Homebrew.
 
 If you don't have homebrew, install it. It's a great package manager for MacOS.
 
@@ -21,7 +25,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-Now we're ready to install the .NET sdk.
+**Now we're ready to install the .NET sdk.**
 
 ```sh
 brew install --cask dotnet-sdk
@@ -33,7 +37,7 @@ brew install --cask dotnet-sdk
 
 Install `dotnet` with your distros package manager.
 
-I use Arch (btw), so I'll install it using pacman.
+I use Arch Linux, so I'll install it using pacman.
 
 ```sh
 sudo pacman -S dotnet-runtime dotnet-sdk
@@ -41,22 +45,27 @@ sudo pacman -S dotnet-runtime dotnet-sdk
 
 ## The rest of the instructions are for both Linux and MacOS
 
-### 1.2 Create Git Repository
+### 1.2 Create a Git Repository
+
+**Note:** If you're just here to get started right away, clone this repository from this commit. There are 20 problems set up with unit tests written. You can solve the problems and test your code as you go. _More info on testing at the bottom._
+
+#### For those following along:
 
 I'm going to call mine cs-neetcode.
 
 ```sh
 mkdir cs-neetcode && cd cs-neetcode
+
 git init
-
 touch .gitignore
-
-echo "/bin" >> .gitignore
+echo "bin/\nobj/" >> .gitignore
 ```
+
+This will create your local repository, and add the bin and obj directories to the gitignore.
 
 ### 1.3 Modular File System
 
-This is how our repository will look as we fill it up with various solutions and tests.
+The repository will look like this after we're finished:
 
 ```sh
 cs-neetcode/
@@ -69,25 +78,27 @@ cs-neetcode/
 │   ├── ValidAnagram.cs
 │   └── ValidAnagramTests.cs
 │
+├── Etc.../
+│
 ├── cs-neetcode.sln
 └── .gitignore
 ```
 
-You will have a unique directory for each problem you solve.
+There will be a unique directory for each problem you want to solve.
 
-Let's create the structure above by running the following commands!
-
-Create a solution file for the entire project:
+**Create a dotnet project and a solution file:**
 
 > Run this command from the root directory of the repository.
 
 ```sh
+dotnet new console -n cs-neetcode
+
 dotnet new sln -n cs-neetcode
 ```
 
 ### 1.4 Preparing Solution Directories
 
-**Note:** Read this entire section before running the commands, I have a shell script at the end that may be useful to you.
+#### Before using these commands, read this entire section. There is a useful sh script at the end that will automate this process.
 
 For each problem, create a new class library and a corresponding test project.
 
@@ -113,9 +124,7 @@ Link the test project to the problem project so that the tests can reference the
 dotnet add TwoSum.Tests/TwoSum.Tests.csproj reference TwoSum/TwoSum.csproj
 ```
 
-I have created a shell script to automate the process detailed above.
-
-Be sure to make it executable with `sudo chmod +x add_problem.sh`
+**I have automated this process with the following shell script:**
 
 **add_problem.sh**
 
@@ -209,8 +218,15 @@ cd ".."
 echo "Setup complete. Solution '$PROBLEM_NAME.sln' created with projects '$PROBLEM_NAME' and '${PROBLEM_NAME}.Tests'."
 ```
 
+Be sure to make add_problem.sh executable:
+
+```sh
+chmod +x add_problem.sh
+```
+
 ### 1.5 Writing Tests and C# Code
 
+The script above generates a testing file that will look similar to this:
 
 **TwoSum.Tests/TwoSumTests.cs**
 
@@ -237,30 +253,24 @@ public class TwoSumSolver
 {
     public int[] TwoSum(int[] nums, int target)
     {
-        // Create a dictionary to store the difference and its corresponding index
+        // Store the difference from target and its index
         Dictionary<int, int> numDict = new Dictionary<int, int>();
 
-        // Iterate through the array
         for (int i = 0; i < nums.Length; i++)
         {
-            // Calculate the difference needed to reach the target
             int difference = target - nums[i];
 
-            // Check if the difference is already in the dictionary
             if (numDict.ContainsKey(difference))
             {
-                // If found, return the indices of the current number and the difference
                 return new int[] { numDict[difference], i };
             }
 
-            // If not found, add the current number and its index to the dictionary
             if (!numDict.ContainsKey(nums[i]))
             {
                 numDict.Add(nums[i], i);
             }
         }
 
-        // If no solution is found, throw an exception (as per LeetCode's requirements)
         throw new ArgumentException("No two sum solution");
     }
 }
@@ -282,7 +292,10 @@ For example:
 
 ```sh
 cd TwoSum.Tests
+
 dotnet test
 ```
 
-![dotnet test](https://www.haydenhanson.dev/images/posts/test-driven-c-sharp/example.png)
+![dotnet test](/images/posts/test-driven-c-sharp/example.png)
+
+**_Happy Coding!_**
