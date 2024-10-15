@@ -94,7 +94,7 @@ cs-neetcode/
 
 ### Included Script:
 
-Be sure to make add_problem.sh executable:
+Be sure to make [add_problem.sh](https://github.com/HansonSoftware/cs-neetcode/blob/main/add_problem.sh) executable:
 
 ```sh
 chmod +x add_problem.sh
