@@ -1,129 +1,79 @@
-# TDD C# Environment for Solving Leetcode Locally
+# Test Driven C# Environment for Solving Leetcode Locally
 
-## Problems with Tests:
+## LC Problems with Tests in this repository:
 
 ### Arrays & Hashing:
 
-1. Two Sum
-2. Valid Anagram
-3. Encode and Decode Strings
+1. Two Sum [LC #1](https://leetcode.com/problems/two-sum/description/)
+2. Valid Anagram [LC #242](https://leetcode.com/problems/valid-anagram/description/)
+3. Encode and Decode Strings [LC #271](https://neetcode.io/problems/string-encode-and-decode)
 
 ### Two Pointers:
 
-4. Valid Palindrome
+4. Valid Palindrome [LC #125](https://leetcode.com/problems/valid-palindrome/description/)
 
 ### Stack:
 
-5. Valid Parentheses
+5. Valid Parentheses [LC #20](https://leetcode.com/problems/valid-parentheses/description/)
 
 ### Binary Search:
 
-6. Binary Search
-7. Search a 2D Matrix
+6. Binary Search [LC #704](https://leetcode.com/problems/binary-search/description/)
+7. Search a 2D Matrix [LC #74](https://leetcode.com/problems/search-a-2d-matrix/description/)
 
 ### Sliding Window
 
-8. Best Time to Buy & Sell Stock
+8. Best Time to Buy & Sell Stock [LC #121](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
 ### Linked List:
 
-9. LRU Cache
+9. LRU Cache [LC #146](https://leetcode.com/problems/lru-cache/description/)
 
 ### Tree:
 
-10. Invert Binary Tree
-11. Serialize & Deserialize Binary Tree
+10. Invert Binary Tree [LC #226](https://leetcode.com/problems/invert-binary-tree/description/)
+11. Serialize & Deserialize Binary Tree [LC #297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/)
 
 ### Heap / Priority Queue:
 
-12. Task Scheduler
-13. Kth Largest Element in a Stream
+12. Task Scheduler [LC #621](https://leetcode.com/problems/task-scheduler/description/)
+13. Kth Largest Element in a Stream [LC #703](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/)
 
 ### Greedy:
 
-14. Maximum Subarray
+14. Maximum Subarray [LC #53](https://leetcode.com/problems/maximum-subarray/description/)
 
 ### Graph:
 
-15. Course Schedule
+15. Course Schedule [LC #207](https://leetcode.com/problems/course-schedule/description/)
 
 ### Dynamic Programming:
 
-16. Climbing Stairs
-17. LCS (Longest Common Subsequence)
+16. Climbing Stairs [LC #70](https://leetcode.com/problems/climbing-stairs/description/)
+17. LCS (Longest Common Subsequence) [LC #1143](https://leetcode.com/problems/longest-common-subsequence/description/)
 
 ### Bit Manipulation:
 
-18. Single Number
-19. Missing Number
-20. Sum of Two Integers (no + or - operator)
-
-[Blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp)
+18. Single Number [LC #136](https://leetcode.com/problems/single-number/description/)
+19. Missing Number [LC #268](https://leetcode.com/problems/missing-number/description/)
+20. Sum of Two Integers (no + or - operator) [LC #371](https://leetcode.com/problems/sum-of-two-integers/description/)
 
 ## How to use this repo:
 
-## MacOS Specific Instructions
+- Use (branch clean) for starting fresh and using the included script to create your own problems.
 
-### 1.1 Install the DOTNET sdk
+- Use (branch starting-point) to start solving the problems provided
 
-#### How? With Homebrew.
+  - Run `dotnet test` from the root directory to test the whole project
+  - Run `cd {PROBLEM_NAME} && dotnet test` to test a problem individually
+  - Write your solutions in `{PROBLEM_NAME}/{PROBLEM_NAME}.cs`
+  - Add more tests in `{PROBLEM_NAME}.Tests/{PROBLEM_NAME}Tests.cs`
 
-If you don't have homebrew, install it. It's a great package manager for MacOS.
+- The main branch includes all of my solutions.
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+_Note:_ I created a [blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp) about how I made this repo and give instructions on how you can create one too.
 
-Go through the cli and press enter when prompted, you will need XCode command line tools, so be sure to accept when the homebrew cli asks.
-
-If you are using an Apple silicon macbook, add `brew` to your PATH like so.
-
-```sh
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-```
-
-**Now we're ready to install the .NET sdk.**
-
-```sh
-brew install --cask dotnet-sdk
-```
-
-## Linux Specific Instructions
-
-### 1.1 Install the DOTNET sdk
-
-Install `dotnet` with your distros package manager.
-
-I use Arch Linux, so I'll install it using pacman.
-
-```sh
-sudo pacman -S dotnet-runtime dotnet-sdk
-```
-
-## The rest of the instructions are for both Linux and MacOS
-
-### 1.2 Create a Git Repository
-
-**Note:** If you're just here to get started right away, clone this repository from this commit. There are 20 problems set up with unit tests written. You can solve the problems and test your code as you go. _More info on testing at the bottom._
-
-#### For those following along:
-
-I'm going to call mine cs-neetcode.
-
-```sh
-mkdir cs-neetcode && cd cs-neetcode
-
-git init
-touch .gitignore
-echo "bin/\nobj/" >> .gitignore
-```
-
-This will create your local repository, and add the bin and obj directories to the gitignore.
-
-### 1.3 Modular File System
-
-The repository will look like this after we're finished:
+### File Structure:
 
 ```sh
 cs-neetcode/
@@ -142,47 +92,13 @@ cs-neetcode/
 └── .gitignore
 ```
 
-There will be a unique directory for each problem you want to solve.
+### Included Script:
 
-**Create a dotnet project and a solution file:**
-
-> Run this command from the root directory of the repository.
+Be sure to make add_problem.sh executable:
 
 ```sh
-dotnet new console -n cs-neetcode
-
-dotnet new sln -n cs-neetcode
+chmod +x add_problem.sh
 ```
-
-### 1.4 Preparing Solution Directories
-
-#### Before using these commands, read this entire section. There is a useful sh script at the end that will automate this process.
-
-For each problem, create a new class library and a corresponding test project.
-
-Example for TwoSum:
-
-```sh
-dotnet new classlib -n TwoSum -o TwoSum
-dotnet new xunit -n TwoSum.Tests -o TwoSum.Tests
-```
-
-Add the projects to the `solution`
-
-**You will do this for each new leetcode problem you solve**
-
-```sh
-dotnet sln add TwoSum/TwoSum.csproj
-dotnet sln add TwoSum.Tests/TwoSum.Tests.csproj
-```
-
-Link the test project to the problem project so that the tests can reference the solution.
-
-```sh
-dotnet add TwoSum.Tests/TwoSum.Tests.csproj reference TwoSum/TwoSum.csproj
-```
-
-**I have automated this process with the following shell script:**
 
 **add_problem.sh**
 
@@ -276,65 +192,7 @@ cd ".."
 echo "Setup complete. Solution '$PROBLEM_NAME.sln' created with projects '$PROBLEM_NAME' and '${PROBLEM_NAME}.Tests'."
 ```
 
-Be sure to make add_problem.sh executable:
-
-```sh
-chmod +x add_problem.sh
-```
-
-### 1.5 Writing Tests and C# Code
-
-The script above generates a testing file that will look similar to this:
-
-**TwoSum.Tests/TwoSumTests.cs**
-
-```cs
-namespace TwoSum.Tests
-{
-    public class TwoSumTests
-    {
-        [Fact]
-        public void TestTwoSum()
-        {
-            var solver = new TwoSumSolver();
-            var result = solver.TwoSum(new int[] { 2, 7, 11, 15 }, 9);
-            Assert.Equal(new int[] { 0, 1 }, result);
-        }
-    }
-}
-```
-
-**TwoSum/TwoSum.cs**
-
-```cs
-public class TwoSumSolver
-{
-    public int[] TwoSum(int[] nums, int target)
-    {
-        // Store the difference from target and its index
-        Dictionary<int, int> numDict = new Dictionary<int, int>();
-
-        for (int i = 0; i < nums.Length; i++)
-        {
-            int difference = target - nums[i];
-
-            if (numDict.ContainsKey(difference))
-            {
-                return new int[] { numDict[difference], i };
-            }
-
-            if (!numDict.ContainsKey(nums[i]))
-            {
-                numDict.Add(nums[i], i);
-            }
-        }
-
-        throw new ArgumentException("No two sum solution");
-    }
-}
-```
-
-### 1.6 Running Tests
+### Testing:
 
 You can test the entire repository by running the following command from the root directory of the project.
 
@@ -355,5 +213,3 @@ dotnet test
 ```
 
 ![dotnet test](https://www.haydenhanson.dev/images/posts/test-driven-c-sharp/example.png)
-
-**_Happy Coding!_**
