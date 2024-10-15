@@ -109,8 +109,10 @@ Input your leetcode problems name.
 You can test the entire repository by running the following command from the root directory of the project.
 
 ```sh
-dotnet test
+dotnet test -v q
 ```
+
+This will run the tests with minimal terminal output.
 
 To test an individual leetcode solution, run the same command from the corresponding directory.
 
