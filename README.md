@@ -60,9 +60,9 @@
 
 ## How to use this repo:
 
-- Use (branch clean) for starting fresh and using the included script to create your own problems.
+- Use branch [clean](https://github.com/HansonSoftware/cs-neetcode/tree/clean) for starting fresh and using the included script to create your own problems.
 
-- Use (branch starting-point) to start solving the problems provided
+- Use branch [base](https://github.com/HansonSoftware/cs-neetcode/tree/base) to start solving the problems provided
 
   - Run `dotnet test` from the root directory to test the whole project
   - Run `cd {PROBLEM_NAME} && dotnet test` to test a problem individually
