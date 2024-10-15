@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidAnagram", "ValidAnagra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidAnagram.Tests", "ValidAnagram.Tests\ValidAnagram.Tests.csproj", "{CD49499C-67BB-4CD1-8171-6A41C127CE6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodeDecodeStrings", "EncodeDecodeStrings\EncodeDecodeStrings.csproj", "{7594DD61-BE19-44EA-B457-F846CB8C137E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodeDecodeStrings.Tests", "EncodeDecodeStrings.Tests\EncodeDecodeStrings.Tests.csproj", "{DB03C1C5-8845-4495-8A68-14271EEDE60E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,5 +56,13 @@ Global
 		{CD49499C-67BB-4CD1-8171-6A41C127CE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD49499C-67BB-4CD1-8171-6A41C127CE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD49499C-67BB-4CD1-8171-6A41C127CE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7594DD61-BE19-44EA-B457-F846CB8C137E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7594DD61-BE19-44EA-B457-F846CB8C137E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7594DD61-BE19-44EA-B457-F846CB8C137E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7594DD61-BE19-44EA-B457-F846CB8C137E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB03C1C5-8845-4495-8A68-14271EEDE60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB03C1C5-8845-4495-8A68-14271EEDE60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB03C1C5-8845-4495-8A68-14271EEDE60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB03C1C5-8845-4495-8A68-14271EEDE60E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
