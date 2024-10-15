@@ -49,9 +49,9 @@ if [ "$defaultFile" = "Class1.cs" ]; then
 	touch "$PROBLEM_NAME.cs"
 
 	# Preview to terminal
-	echo "public class ${PROBLEM_NAME}Solver\n{\n  public void ${PROBLEM_NAME}()\n  {\n    // Your implementation here...\n    throw new ArgumentException(\"No ContainsDuplicate solution\");\n  }\n}\n"
+	echo "public class ${PROBLEM_NAME}Solver\n{\n  public void ${PROBLEM_NAME}()\n  {\n    // Your implementation here...\n    throw new ArgumentException(\"No ${PROBLEM_NAME} solution\");\n  }\n}\n"
 	# Write to file
-	echo "public class ${PROBLEM_NAME}Solver\n{\n  public void ${PROBLEM_NAME}()\n  {\n    // Your implementation here...\n    throw new ArgumentException(\"No ContainsDuplicate solution\");\n  }\n}\n" >> "${PROBLEM_NAME}.cs"
+	echo "public class ${PROBLEM_NAME}Solver\n{\n  public void ${PROBLEM_NAME}()\n  {\n    // Your implementation here...\n    throw new ArgumentException(\"No ${PROBLEM_NAME} solution\");\n  }\n}\n" >> "${PROBLEM_NAME}.cs"
 fi
 
 echo "Done."
