@@ -69,7 +69,7 @@
   - Write your solutions in `{PROBLEM_NAME}/{PROBLEM_NAME}.cs`
   - Add more tests in `{PROBLEM_NAME}.Tests/{PROBLEM_NAME}Tests.cs`
 
-- The main branch includes all of my solutions.
+- The [main](https://github.com/HansonSoftware/cs-neetcode/tree/main) branch includes all of my solutions.
 
 _Note:_ I created a [blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp) about how I made this repo and give instructions on how you can create one too.
 
