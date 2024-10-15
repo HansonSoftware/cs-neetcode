@@ -1,5 +1,63 @@
 # TDD C# Environment for Solving Leetcode Locally
 
+## Problems with Tests:
+
+### Arrays & Hashing:
+
+1. Two Sum
+2. Valid Anagram
+3. Encode and Decode Strings
+
+### Two Pointers:
+
+4. Valid Palindrome
+
+### Stack:
+
+5. Valid Parentheses
+
+### Binary Search:
+
+6. Binary Search
+7. Search a 2D Matrix
+
+### Sliding Window
+
+8. Best Time to Buy & Sell Stock
+
+### Linked List:
+
+9. LRU Cache
+
+### Tree:
+
+10. Invert Binary Tree
+11. Serialize & Deserialize Binary Tree
+
+### Heap / Priority Queue:
+
+12. Task Scheduler
+13. Kth Largest Element in a Stream
+
+### Greedy:
+
+14. Maximum Subarray
+
+### Graph:
+
+15. Course Schedule
+
+### Dynamic Programming:
+
+16. Climbing Stairs
+17. LCS (Longest Common Subsequence)
+
+### Bit Manipulation:
+
+18. Single Number
+19. Missing Number
+20. Sum of Two Integers (no + or - operator)
+
 [Blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp)
 
 ## How to use this repo:
