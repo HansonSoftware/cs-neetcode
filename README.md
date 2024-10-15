@@ -1,5 +1,20 @@
 # Test Driven C# Environment for Solving Leetcode Locally
 
+## How to use this repo:
+
+- Use branch [clean](https://github.com/HansonSoftware/cs-neetcode/tree/clean) for starting fresh and using the included script to create your own problems.
+
+- Use branch [base](https://github.com/HansonSoftware/cs-neetcode/tree/base) to start solving the problems provided
+
+  - Run `dotnet test` from the root directory to test the whole project
+  - Run `cd {PROBLEM_NAME} && dotnet test` to test a problem individually
+  - Write your solutions in `{PROBLEM_NAME}/{PROBLEM_NAME}.cs`
+  - Add more tests in `{PROBLEM_NAME}.Tests/{PROBLEM_NAME}Tests.cs`
+
+- The [main](https://github.com/HansonSoftware/cs-neetcode/tree/main) branch includes all of my solutions.
+
+_Note:_ I created a [blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp) about how I made this repo and give instructions on how you can create one too.
+
 ## LC Problems with Tests in this repository:
 
 ### Arrays & Hashing:
@@ -57,21 +72,6 @@
 18. Single Number [LC #136](https://leetcode.com/problems/single-number/description/)
 19. Missing Number [LC #268](https://leetcode.com/problems/missing-number/description/)
 20. Sum of Two Integers (no + or - operator) [LC #371](https://leetcode.com/problems/sum-of-two-integers/description/)
-
-## How to use this repo:
-
-- Use branch [clean](https://github.com/HansonSoftware/cs-neetcode/tree/clean) for starting fresh and using the included script to create your own problems.
-
-- Use branch [base](https://github.com/HansonSoftware/cs-neetcode/tree/base) to start solving the problems provided
-
-  - Run `dotnet test` from the root directory to test the whole project
-  - Run `cd {PROBLEM_NAME} && dotnet test` to test a problem individually
-  - Write your solutions in `{PROBLEM_NAME}/{PROBLEM_NAME}.cs`
-  - Add more tests in `{PROBLEM_NAME}.Tests/{PROBLEM_NAME}Tests.cs`
-
-- The [main](https://github.com/HansonSoftware/cs-neetcode/tree/main) branch includes all of my solutions.
-
-_Note:_ I created a [blogpost](https://www.haydenhanson.dev/blog/test-driven-c-sharp) about how I made this repo and give instructions on how you can create one too.
 
 ### File Structure:
 
