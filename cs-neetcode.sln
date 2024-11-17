@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch.Tests", "BinarySearch.Tests\BinarySearch.Tests.csproj", "{7532C17F-213B-4EBA-8EBC-EE7363373658}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchMatrix", "SearchMatrix\SearchMatrix.csproj", "{FB7DC42D-28CB-47F9-B7EF-D6ABD0B35BFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchMatrix.Tests", "SearchMatrix.Tests\SearchMatrix.Tests.csproj", "{EFD52412-A43A-4757-A396-87F50FFBCF0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,5 +104,13 @@ Global
 		{7532C17F-213B-4EBA-8EBC-EE7363373658}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7532C17F-213B-4EBA-8EBC-EE7363373658}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7532C17F-213B-4EBA-8EBC-EE7363373658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB7DC42D-28CB-47F9-B7EF-D6ABD0B35BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7DC42D-28CB-47F9-B7EF-D6ABD0B35BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7DC42D-28CB-47F9-B7EF-D6ABD0B35BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7DC42D-28CB-47F9-B7EF-D6ABD0B35BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD52412-A43A-4757-A396-87F50FFBCF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD52412-A43A-4757-A396-87F50FFBCF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD52412-A43A-4757-A396-87F50FFBCF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD52412-A43A-4757-A396-87F50FFBCF0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
