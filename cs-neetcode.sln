@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidParentheses", "ValidPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidParentheses.Tests", "ValidParentheses.Tests\ValidParentheses.Tests.csproj", "{50CAF2A8-7D90-4C42-8A87-740F6621B59B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{CB94418E-63E0-400F-AA38-FD89DE334131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch.Tests", "BinarySearch.Tests\BinarySearch.Tests.csproj", "{7532C17F-213B-4EBA-8EBC-EE7363373658}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,5 +92,13 @@ Global
 		{50CAF2A8-7D90-4C42-8A87-740F6621B59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50CAF2A8-7D90-4C42-8A87-740F6621B59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50CAF2A8-7D90-4C42-8A87-740F6621B59B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB94418E-63E0-400F-AA38-FD89DE334131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB94418E-63E0-400F-AA38-FD89DE334131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB94418E-63E0-400F-AA38-FD89DE334131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB94418E-63E0-400F-AA38-FD89DE334131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7532C17F-213B-4EBA-8EBC-EE7363373658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7532C17F-213B-4EBA-8EBC-EE7363373658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7532C17F-213B-4EBA-8EBC-EE7363373658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7532C17F-213B-4EBA-8EBC-EE7363373658}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
